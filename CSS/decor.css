@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.75;
+}
+#logo {
+    margin: 2px 4px;
+}
+#logo img {
+    margin: 5px 16px;
+    height: 45px;
+    width: 44px;
+    transition-duration: 1s;
+}
+#logo img:hover{
+    transform: rotate(360deg);
+}
+#navbar ul {
+    display: flex;
+}
+#navbar ul li {
+    list-style: none;
+    margin: 14px;
+    font-size: 1.3rem;
+}
+#navbar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 3px 3px;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+#clock {
+    display: block;
+    color: #b4f4f0;
+    text-decoration: none;
+    padding: 3px 3px;
+    font-size: 1.1rem;
+    margin-left: 17rem;
+}
+#home::before{
+    content: "";
+    background: url('../images/background1.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+    height: 527px;
+    justify-content: center;
+    /* check if this is right */
+}
+.h-primary {
+    font-size: 3.3rem;
+    color: black;
+    /* change this to white */
+    padding: 10px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.h-secondary {
+    font-size: 2.8rem;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+#home h1{
+    text-align: center;
+}
+#home p{
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.btn {
+    padding: 6px 20px;
+    border: 2px solid #fd7070;
+    background-color: #705959;
+    color: white;
+    margin: 17px 2px;
+    border-radius: 10px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+#servicesbox {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-content: center;
+    justify-content: center;
+}
+#services {
+    display: flex;
+    margin: 23px;
+}
+#services .box {
+    border: 2px solid red;
+    padding: 22px;
+    margin: 3px 8px;
+    border-radius: 23px;
+    background-color: #ece3e3;
+}
+#services .box img {
+    height: 180px;
+    width: 184px;
+    display: block;
+    margin: 12px auto;
+    
+}
+#services p {
+    text-align: center;
+}
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 409px;
+}
+#client-section {
+    height: 565px;
+    margin: -15px 0px;
+}
+.client-item img{
+    height: 200px;
+    width: 200px;
+    margin: 0px 25px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../images/background3.jpg');
+    height: 82%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#contact {
+    position: relative;
+    margin: -10px 0px;
+}
+#contact::before{
+    content: "";
+    background: url('../images/background2.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+footer{
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, #contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+#contact-box form {
+    width: 40%;
+}
+#contact-box label {
+    font-size: 1.3rem;
+}

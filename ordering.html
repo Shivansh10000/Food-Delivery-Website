@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body::before {
+            content: "";
+            background: url('https://t4.ftcdn.net/jpg/02/44/69/87/360_F_244698725_uWdUNY1oiaHthwcb1NK6IqtPuRNKHor2.jpg') no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        nav {
+            background-color: black;
+            height: 25px;
+            padding: 5px 3px;
+        }
+
+        ul {
+            display: flex;
+            margin-bottom: 50px;
+        }
+
+        li {
+            list-style: none;
+            padding: 3px 4px;
+            margin-left: 27px;
+            font-size: 20px;
+        }
+        
+
+        a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input{
+            display: block;
+            padding: 7px 2px;
+            margin: 25px auto;
+            width: 130%;
+            outline: none;
+        }
+
+        .container {
+            margin-top: 29px;
+            display: flex;
+            margin-left: 500px;
+            margin-top: 100px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            font-size: 22px;
+        }
+        .btn {
+            margin: 10px auto;
+            display: block;
+            cursor: pointer;
+            padding: 3px;
+        }
+        li:hover{
+            background-color: rgb(182, 231, 231);
+            color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Register</a></li>
+        </ul>
+    </nav>
+    <h1>
+        To continue please log in to the website 
+    </h1>
+    <div class="container">
+        <form action="/ordering.html" method="post" id="contact">
+            <label for="name">Login ID : </label>
+            <input type="text" name="login" placeholder="Enter Login id">
+            <label for="name">Password : </label>
+            <input type="text" name="password" placeholder="Enter Password">
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

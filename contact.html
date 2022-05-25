@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body::before {
+            content: "";
+            background: url('https://cdni.iconscout.com/illustration/premium/thumb/fast-delivery-2527792-2117417.png') no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        nav {
+            background-color: black;
+        }
+
+        ul {
+            display: flex;
+            margin-bottom: 50px;
+        }
+
+        li {
+            list-style: none;
+            padding: 3px 4px;
+            margin-left: 27px;
+        }
+
+        a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input,
+        textarea {
+            display: block;
+            padding: 10px;
+            margin: 20px auto;
+            width: 60%;
+            outline: none;
+        }
+
+        .container {
+            margin-top: 29px;
+
+        }
+
+        .btn {
+            margin: 10px auto;
+            display: block;
+            cursor: pointer;
+            padding: 3px;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Register your delivery service employees here :
+    </h1>
+    <div class="container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, doloribus, quasi deleniti excepturi cupiditate necessitatibus sed accusamus minus magni, qui sequi minima illo obcaecati repellendus quisquam aliquid officiis quidem? Facilis fuga enim quae ipsum sunt! Aliquam quam modi ullam placeat.</p>
+        <form action="/contact.html" method="post" id="contact">
+            <input type="text" name="name" placeholder="Enter name">
+            <input type="number" name="age" placeholder="Enter age">
+            <input type="text" name="gender" placeholder="Enter gender">
+            <input type="number" name="rating" placeholder="Enter rating">
+            <input type="number" name="phone" placeholder="Enter phone number">
+            <input type="text" name="city" placeholder="Enter city">
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

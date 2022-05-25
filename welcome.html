@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            top: 0px;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.75;
+        }
+
+        #logo {
+            margin: 2px 4px;
+        }
+
+        #logo img {
+            margin: 5px 16px;
+            height: 45px;
+            width: 44px;
+            transition-duration: 1s;
+        }
+
+        #logo img:hover {
+            transform: rotate(360deg);
+        }
+
+        #navbar ul {
+            display: flex;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            margin: 14px;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 3px 3px;
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        #clock {
+            display: block;
+            color: #b4f4f0;
+            text-decoration: none;
+            padding: 3px 3px;
+            font-size: 1.1rem;
+            margin-left: 17rem;
+        }
+
+        #home::before {
+            content: "";
+            background: url('https://img.freepik.com/free-photo/chicken-wings-barbecue-sweetly-sour-sauce-picnic-summer-menu-tasty-food-top-view-flat-lay_2829-6471.jpg?size=626&ext=jpg&ga=GA1.2.1450000434.1639526400') no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            height: 527px;
+            justify-content: center;
+            /* check if this is right */
+        }
+
+        .h-primary {
+            font-size: 3.3rem;
+            color: black;
+            /* change this to white */
+            padding: 10px;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .h-secondary {
+            font-size: 2.8rem;
+            color: black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #home h1 {
+            text-align: center;
+        }
+
+        #home p {
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid #fd7070;
+            background-color: #705959;
+            color: white;
+            margin: 17px 2px;
+            border-radius: 10px;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn a:hover {
+            background-color: rgb(50, 50, 128);
+            color: whitesmoke;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+        }
+
+        #servicesbox {
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            align-content: center;
+            justify-content: center;
+        }
+
+        #services {
+            display: flex;
+            margin: 23px;
+        }
+
+        #services .box {
+            border: 2px solid red;
+            padding: 22px;
+            margin: 3px 8px;
+            border-radius: 23px;
+            background-color: #ece3e3;
+        }
+
+        #services .box img {
+            height: 180px;
+            width: 184px;
+            display: block;
+            margin: 12px auto;
+
+        }
+
+        #services p {
+            text-align: center;
+        }
+
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 409px;
+        }
+
+        #client-section {
+            height: 565px;
+            margin: -15px 0px;
+        }
+
+        .client-item img {
+            height: 200px;
+            width: 200px;
+            margin: 0px 25px;
+        }
+
+        #client-section::before {
+            content: "";
+            position: absolute;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUjvdwKBYeQfT2tFsX8oxb7Pl3YHESuhd43Q&usqp=CAU') no-repeat center center/cover;
+            height: 82%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        #contact {
+            position: relative;
+            margin: -10px 0px;
+        }
+
+        #contact::before {
+            content: "";
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR20AZUPloD-qEIrXN0yAACzKtjFBZUwUMs2g&usqp=CAU') no-repeat center center/cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        footer {
+            text-align: center;
+            background: black;
+            color: white;
+            padding: 9px 20px;
+        }
+
+        #contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+
+        #contact-box input,
+        #contact-box textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 9px;
+            font-size: 1.1rem;
+        }
+
+        #contact-box form {
+            width: 40%;
+        }
+
+        #contact-box label {
+            font-size: 1.3rem;
+        }
+
+        #redirbtn {
+            text-decoration: none;
+            color: white;
+        }
+
+        #contact .btn {
+            text-align: center;
+            display: block;
+            margin: auto;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://us.123rf.com/450wm/alexskp/alexskp2003/alexskp200300082/143499095-fresh-tasty-burger-isolated-on-white.jpg?ver=6"
+                alt="Ourlogo">
+        </div>
+        <ul>
+            <li class="item">Welcome</li>
+            <li class="item"><a href="/menus.html">Menus</a></li>
+            <li class="item"><a href="/placeorder.html">Place Order</a></li>
+        </ul>
+        <div id="clock">
+            clock
+        </div>
+    </nav>
+    <section id="servicesbox">
+        <h1 class="h-primary">Our Services</h1>
+        <div id="services">
+            <div class="box" id="orderingbox">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUMIPLo3nKUf2vov2ku0tRcJq5qEI42iMq-Q&usqp=CAU"
+                    alt="kebab image">
+                <h2 class="h-secondary">Easy Food Ordering</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae earum officia commodi libero
+                    doloremque molestias excepturi nesciunt, tempore, corrupti quasi ipsa nihil vel dicta culpa.
+                    Cupiditate cumque corporis explicabo at.</p>
+            </div>
+            <div class="box">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="Ice image">
+                <h2 class="h-secondary">Fast Delivery</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae earum officia commodi libero
+                    doloremque molestias excepturi nesciunt, tempore, corrupti quasi ipsa nihil vel dicta culpa.
+                    Cupiditate cumque corporis explicabo at.</p>
+            </div>
+            <div class="box">
+                <img src="https://images.indianexpress.com/2021/12/food-trends_-1200.jpg" alt="coffee image">
+                <h2 class="h-secondary">Reliability</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae earum officia commodi libero
+                    doloremque molestias excepturi nesciunt, tempore, corrupti quasi ipsa nihil vel dicta culpa.
+                    Cupiditate cumque corporis explicabo at.</p>
+            </div>
+        </div>
+    </section>
+    <div class="menucontainer">
+        <div class="menuitem">
+
+        </div>
+    </div>
+    <script>
+        function showtime() {
+            time = new Date();
+            console.log(time);
+            document.getElementById('clock').innerHTML = time;
+        }
+        setInterval(showtime, 1000);
+    </script>
+</body>
+</html>

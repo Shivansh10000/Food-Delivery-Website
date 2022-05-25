@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering Page</title>
+    <style>
+        * {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body::before {
+            content: "";
+            background: url('https://media.istockphoto.com/photos/modern-restaurant-interior-design-picture-id1211547141?k=20&m=1211547141&s=612x612&w=0&h=KiZX3NBZVCK4MlSh4BJ8hZNSJcTIMbNSSV2yusw2NmM=') no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        nav {
+            background-color: black;
+        }
+
+        ul {
+            display: flex;
+            margin-bottom: 50px;
+        }
+
+        li {
+            list-style: none;
+            padding: 3px 4px;
+            margin-left: 27px;
+        }
+
+        a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        .h-primary {
+            font-size: 3.3rem;
+            color: rgb(206, 219, 128);
+            padding: 10px;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        input,
+        textarea {
+            display: block;
+            padding: 15px;
+            margin: 12px auto;
+            margin-top: 50px;
+            width: 60%;
+            outline: none;
+        }
+
+        .container {
+            margin-top: 29px;
+
+        }
+
+        .btn {
+            margin: 10px auto;
+            display: block;
+            cursor: pointer;
+            padding: 3px;
+        }
+        p{
+            margin-top: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: rgb(159, 183, 253);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="home">
+        <h1 class="h-primary">MENUS TO SELECT FROM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ab neque dolor obcaecati iure quia pariatur
+            laboriosam animi suscipit id aliquam ex consectetur veniam asperiores velit porro eligendi fugit aliquid
+            vitae delectus, voluptatibus quis!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, dolore.</p>
+    </section>
+    <div class="container">
+        <p>Please enter the details of the item you are searching for :</p>
+        <form action="/menus.html" method="post" id="menu">
+            <input type="text" name="name" placeholder="Enter the name of dish you are looking for">
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

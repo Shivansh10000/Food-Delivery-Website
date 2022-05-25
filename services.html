@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        * {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            font-size: 20px;
+            color: blanchedalmond;
+        }
+
+        body::before {
+            content: "";
+            background: url('https://media.istockphoto.com/photos/modern-restaurant-interior-design-picture-id1211547141?k=20&m=1211547141&s=612x612&w=0&h=KiZX3NBZVCK4MlSh4BJ8hZNSJcTIMbNSSV2yusw2NmM=') no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        nav {
+            background-color: black;
+        }
+
+        ul {
+            display: flex;
+            margin-bottom: 50px;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #home p {
+            margin-left: 12px;
+            text-align: center;
+        }
+        .container p{
+            margin-left: 12px;
+            text-align: center;
+        }
+        li {
+            list-style: none;
+            padding: 3px 4px;
+            margin-left: 27px;
+        }
+
+        a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+
+        }
+
+        .h-primary {
+            font-size: 3.3rem;
+            color: beige;
+            /* change this to white */
+            padding: 10px;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        input,
+        textarea {
+            display: block;
+            padding: 10px;
+            margin: 30px auto;
+            width: 60%;
+            border: 2px solid rgb(224, 181, 181);
+            border-radius: 10px;
+        }
+
+        .container {
+            margin-top: 29px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn {
+            margin: 10px auto;
+            display: block;
+            cursor: pointer;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="home">
+        <h1 class="h-primary">OUR SERVICES</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ab neque dolor obcaecati iure quia pariaturlaboriosam animi suscipit id aliquam ex consectetur veniam asperiores velit porro eligendi fugit aliquid vitae delectus, voluptatibus quis!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, dolore.</p>
+    </section>
+    <div class="container">
+        <p>To add your restaurant as a service to our website please fill the details given below : </p>
+        <form action="/services.html" method="post" id="services">
+            <input type="text" name="name" placeholder="Enter your Restaurant's name">
+            <input type="text" name="city" placeholder="Enter the city">
+            <input type="text" name="rating" placeholder="Enter your restaurant's rating">
+            <input type="text" name="address" placeholder="Enter your restaurant's address">
+            <input type="text" name="contact" placeholder="Enter your restaurant's contact number">
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
